@@ -541,7 +541,7 @@ nav {
 .timeline-item:not(:last-child)::after {
   content: '';
   position: absolute;
-  left: 151px;
+  left: calc(160px + 1rem - 0.5px);
   top: 8px;
   bottom: 0;
   width: 1px;
@@ -553,13 +553,14 @@ nav {
   font-size: 0.75rem;
   color: var(--muted);
   padding-top: 4px;
+  padding-right: 0.5rem;
   text-align: right;
   line-height: 1.5;
 }
 
 .timeline-dot {
   position: absolute;
-  left: 146px;
+  left: calc(160px + 1rem - 5px);
   top: 6px;
   width: 10px;
   height: 10px;
