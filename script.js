@@ -39,13 +39,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setActiveNav() {
     let currentId = '';
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      if (window.scrollY >= sectionTop) {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
         currentId = section.getAttribute('id');
       }
     });
+
+    if (!currentId && window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+      currentId = sections[sections.length - 1].getAttribute('id');
+    }
+
+  // function setActiveNav() {
+  //   let currentId = '';
+
+  //   sections.forEach(section => {
+  //     const sectionTop = section.offsetTop - 100;
+  //     if (window.scrollY >= sectionTop) {
+  //       currentId = section.getAttribute('id');
+  //     }
+  //   });
 
     navAnchors.forEach(a => {
       a.classList.toggle('active', a.getAttribute('href') === `#${currentId}`);
