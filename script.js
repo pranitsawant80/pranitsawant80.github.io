@@ -102,30 +102,47 @@ document.addEventListener('DOMContentLoaded', () => {
      ---------------------------------------------------------- */
   const nav = document.querySelector('nav');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      nav.style.background = 'rgba(10, 12, 16, 0.97)';
-    } else {
-      nav.style.background = 'rgba(10, 12, 16, 0.85)';
-    }
-  }, { passive: true });
+  function updateNavBackground() {
+    if (!nav) return;
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  }
+
+  window.addEventListener('scroll', updateNavBackground, { passive: true });
+  updateNavBackground();
 
 
   /* ----------------------------------------------------------
-     4. FUTURE FEATURE HOOKS
+     4. THEME TOGGLE
+     ---------------------------------------------------------- */
+  const themeToggle = document.querySelector('.theme-toggle');
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (themeToggle) {
+      themeToggle.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+      );
+    }
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    setTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+  }
+
+
+  /* ----------------------------------------------------------
+     5. FUTURE FEATURE HOOKS
      Uncomment and build on these when you're ready.
      ---------------------------------------------------------- */
 
-  // --- 4a. Dark/Light mode toggle ---
-  // function toggleTheme() {
-  //   document.body.classList.toggle('light-mode');
-  //   localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
-  // }
-  // const savedTheme = localStorage.getItem('theme');
-  // if (savedTheme === 'light') document.body.classList.add('light-mode');
-
-
-  // --- 4b. Project filter by category ---
+  // --- 5a. Project filter by category ---
   // const filterBtns = document.querySelectorAll('.filter-btn');
   // filterBtns.forEach(btn => {
   //   btn.addEventListener('click', () => {
