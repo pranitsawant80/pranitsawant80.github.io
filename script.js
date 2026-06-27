@@ -136,9 +136,43 @@ document.addEventListener('DOMContentLoaded', () => {
     setTheme(document.documentElement.getAttribute('data-theme') || 'dark');
   }
 
+  /* ----------------------------------------------------------
+     5. AVATAR LIGHTBOX
+     ---------------------------------------------------------- */
+  const avatarTrigger = document.querySelector('.nav-avatar');
+  const avatarModal = document.querySelector('.avatar-modal');
+  const avatarClose = document.querySelector('.avatar-modal-close');
+
+  function closeAvatarModal() {
+    if (!avatarModal) return;
+    avatarModal.classList.remove('open');
+    avatarModal.setAttribute('aria-hidden', 'true');
+  }
+
+  if (avatarTrigger && avatarModal && avatarClose) {
+    avatarTrigger.addEventListener('click', () => {
+      avatarModal.classList.add('open');
+      avatarModal.setAttribute('aria-hidden', 'false');
+    });
+
+    avatarClose.addEventListener('click', closeAvatarModal);
+
+    avatarModal.addEventListener('click', (event) => {
+      if (event.target === avatarModal) {
+        closeAvatarModal();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeAvatarModal();
+      }
+    });
+  }
+
 
   /* ----------------------------------------------------------
-     5. FUTURE FEATURE HOOKS
+     6. FUTURE FEATURE HOOKS
      Uncomment and build on these when you're ready.
      ---------------------------------------------------------- */
 
