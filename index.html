@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pranit Sawant – AI Engineer</title>
+  <title>Pranit Sawant – AI Engineer | Generative AI & LLM Specialist</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Pranit Sawant - AI Engineer specializing in Generative AI, LLMs, Agentic AI, and cloud-native platforms. 2+ years GenAI experience delivering enterprise solutions.">
+  <meta name="keywords" content="AI Engineer, Generative AI, LLM, Agentic AI, Machine Learning, Data Science, RAG, Azure OpenAI, FastAPI">
+  <meta name="author" content="Pranit Sawant">
+  <meta name="theme-color" content="#4f8ef7">
+  
+  <!-- Open Graph Tags (Social Media) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pranitsawant80.github.io">
+  <meta property="og:title" content="Pranit Sawant – AI Engineer">
+  <meta property="og:description" content="Building intelligent AI systems. Generative AI, LLMs, Agentic AI, Enterprise Solutions.">
+  <meta property="og:image" content="https://pranitsawant80.github.io/assets/images/profile.png">
+  <meta property="og:image:type" content="image/png">
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pranit Sawant – AI Engineer">
+  <meta name="twitter:description" content="Building intelligent AI systems. Generative AI | LLMs | Agentic AI">
+  <meta name="twitter:image" content="https://pranitsawant80.github.io/assets/images/profile.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://pranitsawant80.github.io">
+  
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script>
     (function () {
       var saved = localStorage.getItem('theme');
@@ -40,7 +65,7 @@
         </svg>
       </button>
       <button class="nav-avatar" type="button" aria-label="View profile photo">
-        <img src="images/myphoto.png" alt="Pranit Sawant">
+        <img src="assets/images/myphoto.png" alt="Pranit Sawant">
       </button>
       <button class="nav-toggle" aria-label="Toggle menu">☰</button>
     </div>
@@ -134,58 +159,7 @@
         <p class="section-label">Technical Skills</p>
         <h2>Full-stack AI engineering</h2>
       </div>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <div class="skill-group-title">AI / Generative AI</div>
-          <div class="tags">
-            <span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">RAG</span>
-            <span class="tag">Agentic AI</span><span class="tag">MCP</span><span class="tag">GPT-4o</span>
-            <span class="tag">Gemini Pro</span><span class="tag">Azure OpenAI</span><span class="tag">Prompt Engineering</span>
-            <span class="tag">RAGAS</span><span class="tag">Multi-Agent Systems</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Cloud Platforms</div>
-          <div class="tags">
-            <span class="tag">Microsoft Azure</span><span class="tag">GCP</span><span class="tag">Azure OpenAI</span>
-            <span class="tag">Azure AI Foundry</span><span class="tag">Azure Durable Functions</span>
-            <span class="tag">Azure Document Intelligence</span><span class="tag">Vertex AI</span>
-            <span class="tag">Azure Blob Storage</span><span class="tag">GCP Pub/Sub</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Backend & Infrastructure</div>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Flask</span>
-            <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Redis</span>
-            <span class="tag">Celery</span><span class="tag">Azure Service Bus</span><span class="tag">Microservices</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Databases & Storage</div>
-          <div class="tags">
-            <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">ChromaDB</span>
-            <span class="tag">Vector Databases</span><span class="tag">Azure SQL</span>
-            <span class="tag">SQLAlchemy</span><span class="tag">BigQuery</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">ML & Data Science</div>
-          <div class="tags">
-            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Scikit-learn</span>
-            <span class="tag">OpenCV</span><span class="tag">NLP</span><span class="tag">Predictive Analytics</span>
-            <span class="tag">NL2SQL</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Domain Expertise</div>
-          <div class="tags">
-            <span class="tag">Healthcare Analytics</span><span class="tag">Document Intelligence</span>
-            <span class="tag">Conversational Analytics</span><span class="tag">Enterprise AI</span>
-            <span class="tag">Research & Life Sciences</span>
-          </div>
-        </div>
-      </div>
+      <div class="skills-grid" data-container="skills"></div>
     </div>
   </section>
 
@@ -196,93 +170,7 @@
         <p class="section-label">Recent Projects</p>
         <h2>Enterprise AI in production</h2>
       </div>
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <div class="project-meta">
-            <span class="project-client">Fortune 500 Utility Client</span>
-            <span class="project-duration">2026</span>
-          </div>
-          <div class="project-title">InvoiceIQ – Intelligent Utility Bill Processing Platform</div>
-          <p class="project-desc">Enterprise document intelligence platform for automated utility invoice processing, leveraging multi-agent workflows and cloud-native orchestration for scalable document extraction and validation. Used LangGraph multi-agent workflows and Azure Durable Functions for scalable orchestration.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Azure OpenAI</span><span class="tech-badge">LangGraph</span>
-            <span class="tech-badge">Azure Durable Functions</span><span class="tech-badge">MCP</span>
-            <span class="tech-badge">FastAPI</span><span class="tech-badge">Docker</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-meta">
-            <span class="project-client">European Healthcare Client</span>
-            <span class="project-duration">2025</span>
-          </div>
-          <div class="project-title">CareVision AI – Hospital Surveillance & Analytics Platform</div>
-          <p class="project-desc">Multimodal AI platform for operational video analytics, enabling compliance monitoring, workflow insights, emergency detection, and automated reporting across healthcare operations.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Gemini 1.5 Pro</span><span class="tech-badge">GCP</span>
-            <span class="tech-badge">Vertex AI</span><span class="tech-badge">Kubernetes</span>
-            <span class="tech-badge">OpenCV</span><span class="tech-badge">BigQuery</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-meta">
-            <span class="project-client">Global Healthcare Client</span>
-            <span class="project-duration">2025</span>
-          </div>
-          <div class="project-title">IntelliPredict – AI-Driven Predictive Analytics & AutoML</div>
-          <p class="project-desc">Conversational AI platform that dynamically generates, trains, and executes ML models from natural language queries, enabling non-technical users to perform prediction tasks without code.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Gemini Pro</span><span class="tech-badge">LangChain</span>
-            <span class="tech-badge">FastAPI</span><span class="tech-badge">PostgreSQL</span>
-            <span class="tech-badge">SQLAlchemy</span><span class="tech-badge">GCP</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-meta">
-            <span class="project-client">Global Healthcare Client</span>
-            <span class="project-duration">2024–2025</span>
-          </div>
-          <div class="project-title">HealthVertex – AI-Powered Hospital Analytics Platform</div>
-          <p class="project-desc">Conversational analytics platform translating natural language into optimized SQL across large-scale enterprise databases using semantic retrieval and reusable knowledge repositories.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Gemini Pro</span><span class="tech-badge">LangGraph</span>
-            <span class="tech-badge">ChromaDB</span><span class="tech-badge">NL2SQL</span>
-            <span class="tech-badge">FastAPI</span><span class="tech-badge">PostgreSQL</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-meta">
-            <span class="project-client">Research Organization</span>
-            <span class="project-duration">2024</span>
-          </div>
-          <div class="project-title">MedExtract – Research Paper Data Extraction Platform</div>
-          <p class="project-desc">Automating extraction of hundreds of domain-specific structured data fields</p>
-          <div class="project-tech">
-            <span class="tech-badge">Azure OpenAI</span><span class="tech-badge">Azure Document Intelligence</span>
-            <span class="tech-badge">GPT-4.1-mini</span><span class="tech-badge">FastAPI</span>
-            <span class="tech-badge">PostgreSQL</span><span class="tech-badge">Azure Blob Storage</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-meta">
-            <span class="project-client">Media Technology Client</span>
-            <span class="project-duration">2024</span>
-          </div>
-          <div class="project-title">ScriptMaster – AI-Powered Script Writing Assistant</div>
-          <p class="project-desc">Collaborative AI script writing tool leveraging LLMs and RAG to generate story narratives, character arcs, beat sheets, and screenplay components through conversational workflows.</p>
-          <div class="project-tech">
-            <span class="tech-badge">LangGraph</span><span class="tech-badge">Azure OpenAI</span>
-            <span class="tech-badge">RAG</span><span class="tech-badge">Redis</span>
-            <span class="tech-badge">Celery</span><span class="tech-badge">Docker</span>
-          </div>
-        </div>
-
-      </div>
+      <div class="projects-grid" data-container="projects"></div>
     </div>
   </section>
 
@@ -293,62 +181,7 @@
         <p class="section-label">Experience</p>
         <h2>Professional journey</h2>
       </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">Dec 2025 – Present</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-role">Engineer</div>
-            <div class="timeline-company">Nagarro</div>
-            <p class="timeline-desc">Building enterprise AI solutions and GenAI-powered applications for clients across geographies.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Jul 2025 – Jan 2026</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-role">Senior Developer (AI)</div>
-            <div class="timeline-company">Reelwise Entertainment</div>
-            <p class="timeline-desc">Led AI development for enterprise and media technology projects. Designed production-ready conversational AI, document intelligence, and predictive analytics solutions.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Aug 2024 – Jun 2025</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-role">GenAI Engineer</div>
-            <div class="timeline-company">Reelwise Entertainment</div>
-            <p class="timeline-desc">Built scalable AI backends using Generative AI, LLMs, and RAG. Developed cloud-native systems for enterprise and healthcare domains.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Feb – Jul 2024</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-role">GenAI Engineer</div>
-            <div class="timeline-company">Reelwise Entertainment</div>
-            <p class="timeline-desc">Implemented AI agent workflows, multi-step reasoning, and conversational AI platforms using LangChain, FastAPI, and Docker.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Dec 2023 – Feb 2024</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-role">Machine Learning Intern</div>
-            <div class="timeline-company">MegSoft</div>
-            <p class="timeline-desc">Developed APIs using Flask and FastAPI. Worked with PyTorch and TensorFlow for ML model development.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Nov – Dec 2023</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-role">Machine Learning Intern</div>
-            <div class="timeline-company">CodeSpeedy Technology</div>
-            <p class="timeline-desc">Data analysis and ML model implementation with a focus on NLP and Predictive Analytics for EdTech content.</p>
-          </div>
-        </div>
-      </div>
+      <div class="timeline" data-container="experience"></div>
     </div>
   </section>
 
@@ -359,48 +192,7 @@
         <p class="section-label">Testimonials</p>
         <h2>What colleagues say about working with me</h2>
       </div>
-      <div class="testimonials-grid">
-        
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p class="testimonial-quote">"Pranit excels at understanding business problems and translating them into effective AI-driven solutions. He combines strong problem-solving skills with the ability to explain complex concepts in a simple, client-friendly way. A dependable team player, he consistently delivers high-quality solutions on time."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="images/male_icon.png" alt="Rohan Singh" class="testimonial-avatar">
-            <div class="testimonial-info">
-              <div class="testimonial-name">Rohan Singh</div>
-              <div class="testimonial-title">Lead Data Scientist</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p class="testimonial-quote">"Pranit is a highly skilled AI and Data Science professional with a hands-on approach to solving complex challenges. His technical expertise, collaborative mindset, and willingness to share knowledge make him a reliable teammate and a valuable contributor to any project."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="images/male_icon.png" alt="Dhruv Jain" class="testimonial-avatar">
-            <div class="testimonial-info">
-              <div class="testimonial-name">Dhruv Jain</div>
-              <div class="testimonial-title">Software Engineer</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p class="testimonial-quote">"Pranit consistently delivers high-quality AI solutions with strong technical expertise, excellent communication, and a proactive approach to learning. He quickly adapts to new domains, presents complex ideas with clarity, and combines independent problem-solving with effective teamwork to achieve outstanding project outcomes."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="images/male_icon.png" alt="Kartik Deshpande" class="testimonial-avatar">
-            <div class="testimonial-info">
-              <div class="testimonial-name">Kartik Deshpande</div>
-              <div class="testimonial-title">AI & Technology Leader</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <div class="testimonials-grid" data-container="testimonials"></div>
     </div>
   </section>
 
@@ -462,10 +254,10 @@
   <div class="avatar-modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="avatar-modal-panel">
       <button class="avatar-modal-close" type="button" aria-label="Close photo">×</button>
-      <img src="images/myphoto.png" alt="Pranit Sawant" class="avatar-modal-image">
+      <img src="assets/images/myphoto.png" alt="Pranit Sawant" class="avatar-modal-image">
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

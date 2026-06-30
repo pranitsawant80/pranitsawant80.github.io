@@ -1,0 +1,151 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "InvoiceIQ – Intelligent Utility Bill Processing Platform",
+      "client": "Fortune 500 Utility Client",
+      "duration": "2026",
+      "description": "Enterprise document intelligence platform for automated utility invoice processing, leveraging multi-agent workflows and cloud-native orchestration for scalable document extraction and validation. Used LangGraph multi-agent workflows and Azure Durable Functions for scalable orchestration.",
+      "tech": ["Azure OpenAI", "LangGraph", "Azure Durable Functions", "MCP", "FastAPI", "Docker"]
+    },
+    {
+      "id": 2,
+      "title": "CareVision AI – Hospital Surveillance & Analytics Platform",
+      "client": "European Healthcare Client",
+      "duration": "2025",
+      "description": "Multimodal AI platform for operational video analytics, enabling compliance monitoring, workflow insights, emergency detection, and automated reporting across healthcare operations.",
+      "tech": ["Gemini 1.5 Pro", "GCP", "Vertex AI", "Kubernetes", "OpenCV", "BigQuery"]
+    },
+    {
+      "id": 3,
+      "title": "IntelliPredict – AI-Driven Predictive Analytics & AutoML",
+      "client": "Global Healthcare Client",
+      "duration": "2025",
+      "description": "Conversational AI platform that dynamically generates, trains, and executes ML models from natural language queries, enabling non-technical users to perform prediction tasks without code.",
+      "tech": ["Gemini Pro", "LangChain", "FastAPI", "PostgreSQL", "SQLAlchemy", "GCP"]
+    },
+    {
+      "id": 4,
+      "title": "HealthVertex – AI-Powered Hospital Analytics Platform",
+      "client": "Global Healthcare Client",
+      "duration": "2024–2025",
+      "description": "Conversational analytics platform translating natural language into optimized SQL across large-scale enterprise databases using semantic retrieval and reusable knowledge repositories.",
+      "tech": ["Gemini Pro", "LangGraph", "ChromaDB", "NL2SQL", "FastAPI", "PostgreSQL"]
+    },
+    {
+      "id": 5,
+      "title": "MedExtract – Research Paper Data Extraction Platform",
+      "client": "Research Organization",
+      "duration": "2024",
+      "description": "Automating extraction of hundreds of domain-specific structured data fields from research papers using AI.",
+      "tech": ["Azure OpenAI", "Azure Document Intelligence", "GPT-4.1-mini", "FastAPI", "PostgreSQL", "Azure Blob Storage"]
+    },
+    {
+      "id": 6,
+      "title": "ScriptMaster – AI-Powered Script Writing Assistant",
+      "client": "Media Technology Client",
+      "duration": "2024",
+      "description": "Collaborative AI script writing tool leveraging LLMs and RAG to generate story narratives, character arcs, beat sheets, and screenplay components through conversational workflows.",
+      "tech": ["LangGraph", "Azure OpenAI", "RAG", "Redis", "Celery", "Docker"]
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Rohan Singh",
+      "title": "Lead Data Scientist",
+      "quote": "Pranit excels at understanding business problems and translating them into effective AI-driven solutions. He combines strong problem-solving skills with the ability to explain complex concepts in a simple, client-friendly way. A dependable team player, he consistently delivers high-quality solutions on time.",
+      "image": "assets/images/male_icon.png"
+    },
+    {
+      "id": 2,
+      "name": "Dhruv Jain",
+      "title": "Software Engineer (Data) @ Apple",
+      "quote": "Pranit is a highly skilled AI and Data Science professional with a hands-on approach to solving complex challenges. His technical expertise, collaborative mindset, and willingness to share knowledge make him a reliable teammate and a valuable contributor to any project.",
+      "image": "assets/images/male_icon.png"
+    },
+    {
+      "id": 3,
+      "name": "Kartik Deshpande",
+      "title": "AI & Technology Leader",
+      "quote": "Pranit consistently delivers high-quality AI solutions with strong technical expertise, excellent communication, and a proactive approach to learning. He quickly adapts to new domains, presents complex ideas with clarity, and combines independent problem-solving with effective teamwork to achieve outstanding project outcomes.",
+      "image": "assets/images/male_icon.png"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "startDate": "Dec 2025",
+      "endDate": "Present",
+      "role": "Engineer",
+      "company": "Nagarro",
+      "description": "Building enterprise AI solutions and GenAI-powered applications for clients across geographies."
+    },
+    {
+      "id": 2,
+      "startDate": "Jul 2025",
+      "endDate": "Jan 2026",
+      "role": "Senior Developer (AI)",
+      "company": "Reelwise Entertainment",
+      "description": "Led AI development for enterprise and media technology projects. Designed production-ready conversational AI, document intelligence, and predictive analytics solutions."
+    },
+    {
+      "id": 3,
+      "startDate": "Aug 2024",
+      "endDate": "Jun 2025",
+      "role": "GenAI Engineer",
+      "company": "Reelwise Entertainment",
+      "description": "Built scalable AI backends using Generative AI, LLMs, and RAG. Developed cloud-native systems for enterprise and healthcare domains."
+    },
+    {
+      "id": 4,
+      "startDate": "Feb 2024",
+      "endDate": "Jul 2024",
+      "role": "GenAI Engineer",
+      "company": "Reelwise Entertainment",
+      "description": "Implemented AI agent workflows, multi-step reasoning, and conversational AI platforms using LangChain, FastAPI, and Docker."
+    },
+    {
+      "id": 5,
+      "startDate": "Dec 2023",
+      "endDate": "Feb 2024",
+      "role": "Machine Learning Intern",
+      "company": "MegSoft",
+      "description": "Developed APIs using Flask and FastAPI. Worked with PyTorch and TensorFlow for ML model development."
+    },
+    {
+      "id": 6,
+      "startDate": "Nov 2023",
+      "endDate": "Dec 2023",
+      "role": "Machine Learning Intern",
+      "company": "CodeSpeedy Technology",
+      "description": "Data analysis and ML model implementation with a focus on NLP and Predictive Analytics for EdTech content."
+    }
+  ],
+  "skills": [
+    {
+      "category": "AI / Generative AI",
+      "items": ["LangChain", "LangGraph", "RAG", "Agentic AI", "MCP", "GPT-4o", "Gemini Pro", "Azure OpenAI", "Prompt Engineering", "RAGAS", "Multi-Agent Systems"]
+    },
+    {
+      "category": "Cloud Platforms",
+      "items": ["Microsoft Azure", "GCP", "Azure OpenAI", "Azure AI Foundry", "Azure Durable Functions", "Azure Document Intelligence", "Vertex AI", "Azure Blob Storage", "GCP Pub/Sub"]
+    },
+    {
+      "category": "Backend & Infrastructure",
+      "items": ["Python", "FastAPI", "Flask", "Docker", "Kubernetes", "Redis", "Celery", "Azure Service Bus", "Microservices"]
+    },
+    {
+      "category": "Databases & Storage",
+      "items": ["PostgreSQL", "MySQL", "ChromaDB", "Vector Databases", "Azure SQL", "SQLAlchemy", "BigQuery"]
+    },
+    {
+      "category": "ML & Data Science",
+      "items": ["PyTorch", "TensorFlow", "Scikit-learn", "OpenCV", "NLP", "Predictive Analytics", "NL2SQL"]
+    },
+    {
+      "category": "Domain Expertise",
+      "items": ["Healthcare Analytics", "Document Intelligence", "Conversational Analytics", "Enterprise AI", "Research & Life Sciences"]
+    }
+  ]
+}

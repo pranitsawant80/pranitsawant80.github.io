@@ -1,0 +1,37 @@
+{
+  "name": "pranit-portfolio",
+  "version": "1.0.0",
+  "description": "Pranit Sawant - AI Engineer Portfolio | Generative AI, LLM, Agentic AI",
+  "author": "Pranit Sawant",
+  "license": "MIT",
+  "homepage": "https://pranitsawant80.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pranitsawant80/pranitsawant80.github.io.git"
+  },
+  "scripts": {
+    "dev": "http-server -p 8080 -c-1",
+    "start": "http-server",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\"",
+    "lint": "eslint \"js/**/*.js\"",
+    "lint:fix": "eslint \"js/**/*.js\" --fix"
+  },
+  "keywords": [
+    "portfolio",
+    "ai-engineer",
+    "generative-ai",
+    "llm",
+    "agentic-ai",
+    "machine-learning",
+    "data-science"
+  ],
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.0.0",
+    "eslint": "^8.48.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
