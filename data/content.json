@@ -144,6 +144,10 @@
       "items": ["PyTorch", "TensorFlow", "Scikit-learn", "OpenCV", "NLP", "Predictive Analytics", "NL2SQL"]
     },
     {
+      "category": "Frontend Technologies",
+      "items": ["HTML", "CSS", "JavaScript"]
+    },
+    {
       "category": "Domain Expertise",
       "items": ["Healthcare Analytics", "Document Intelligence", "Conversational Analytics", "Enterprise AI", "Research & Life Sciences"]
     }
