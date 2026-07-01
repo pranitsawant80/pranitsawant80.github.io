@@ -2,10 +2,10 @@
   "projects": [
     {
       "id": 1,
-      "title": "InvoiceIQ — Intelligent Utility Invoice Processing",
+      "title": "DocumentIQ — Intelligent Utility Document Processing",
       "client": "Utility Client",
       "duration": "2026",
-      "description": "Enterprise document intelligence platform for automated invoice ingestion, extraction, validation, and workflow orchestration. Implemented multi-agent pipelines and cloud-native durable orchestration to support high-throughput document processing with automated validation and exception routing.",
+      "description": "Enterprise document intelligence platform for automated document ingestion, extraction, validation, and workflow orchestration. Implemented multi-agent pipelines and cloud-native durable orchestration to support high-throughput document processing with automated validation and exception routing.",
       "tech": ["Azure OpenAI", "LangGraph", "Azure Durable Functions", "MCP", "FastAPI", "Docker"]
     },
     {
