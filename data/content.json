@@ -34,10 +34,10 @@
     },
     {
       "id": 5,
-      "title": "MedExtract – Research Paper Data Extraction Platform",
+      "title": "MedExtract – Medical Data Extraction Platform",
       "client": "Research Organization",
       "duration": "2024",
-      "description": "Automating extraction of hundreds of domain-specific structured data fields from research papers using AI.",
+      "description": "Automating extraction of hundreds of domain-specific structured data fields from medicine-related documents using AI.",
       "tech": ["Azure OpenAI", "Azure Document Intelligence", "GPT-4.1-mini", "FastAPI", "PostgreSQL", "Azure Blob Storage"]
     },
     {
