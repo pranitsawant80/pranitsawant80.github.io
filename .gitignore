@@ -2,6 +2,7 @@
 node_modules/
 package-lock.json
 yarn.lock
+package.json
 
 # Environment variables
 .env
@@ -42,3 +43,5 @@ yarn-error.log*
 .project
 .pydevproject
 .settings/
+
+REVIEW_SUMMARY.md
