@@ -153,9 +153,6 @@ npm run build  # (when configured)
 │   └── script.js
 ├── assets/             # Static assets (images, icons)
 ├── data/               # Optional content/data files
-├── docs/               # Project documentation
-│   ├── CODEBASE_REVIEW.md
-│   └── ARCHITECTURE.md
 ├── README.md           # Project overview
 ├── SETUP.md            # This file
 ├── .gitignore          # Git ignore rules
