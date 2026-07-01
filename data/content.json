@@ -2,34 +2,34 @@
   "projects": [
     {
       "id": 1,
-      "title": "InvoiceIQ – Intelligent Utility Bill Processing Platform",
-      "client": "Fortune 500 Utility Client",
+      "title": "InvoiceIQ — Intelligent Utility Invoice Processing",
+      "client": "Utility Client",
       "duration": "2026",
-      "description": "Enterprise document intelligence platform for automated utility invoice processing, leveraging multi-agent workflows and cloud-native orchestration for scalable document extraction and validation. Used LangGraph multi-agent workflows and Azure Durable Functions for scalable orchestration.",
+      "description": "Enterprise document intelligence platform for automated invoice ingestion, extraction, validation, and workflow orchestration. Implemented multi-agent pipelines and cloud-native durable orchestration to support high-throughput document processing with automated validation and exception routing.",
       "tech": ["Azure OpenAI", "LangGraph", "Azure Durable Functions", "MCP", "FastAPI", "Docker"]
     },
     {
       "id": 2,
-      "title": "CareVision AI – Hospital Surveillance & Analytics Platform",
-      "client": "European Healthcare Client",
+      "title": "CareVision AI — Clinical Video Analytics & Operational Monitoring",
+      "client": "Healthcare Client",
       "duration": "2025",
-      "description": "Multimodal AI platform for operational video analytics, enabling compliance monitoring, workflow insights, emergency detection, and automated reporting across healthcare operations.",
+      "description": "Multimodal video analytics system for healthcare operations, delivering compliance monitoring, real-time anomaly detection, workflow analytics, and automated reporting to improve safety and operational efficiency.",
       "tech": ["Gemini 1.5 Pro", "GCP", "Vertex AI", "Kubernetes", "OpenCV", "BigQuery"]
     },
     {
       "id": 3,
-      "title": "IntelliPredict – AI-Driven Predictive Analytics & AutoML",
+      "title": "IntelliPredict — Conversational AutoML & Predictive Analytics",
       "client": "Global Healthcare Client",
       "duration": "2025",
-      "description": "Conversational AI platform that dynamically generates, trains, and executes ML models from natural language queries, enabling non-technical users to perform prediction tasks without code.",
+      "description": "Natural-language-driven platform that generates, trains, and deploys predictive models from user queries, enabling non-technical users to run forecasts and classification tasks without writing code.",
       "tech": ["Gemini Pro", "LangChain", "FastAPI", "PostgreSQL", "SQLAlchemy", "GCP"]
     },
     {
       "id": 4,
-      "title": "HealthVertex – AI-Powered Hospital Analytics Platform",
+      "title": "HealthVertex — Conversational Enterprise Analytics",
       "client": "Global Healthcare Client",
       "duration": "2024–2025",
-      "description": "Conversational analytics platform translating natural language into optimized SQL across large-scale enterprise databases using semantic retrieval and reusable knowledge repositories.",
+      "description": "Conversational analytics service that translates business questions into optimized SQL and executes them across enterprise-scale databases using semantic retrieval and reusable knowledge repositories.",
       "tech": ["Gemini Pro", "LangGraph", "ChromaDB", "NL2SQL", "FastAPI", "PostgreSQL"]
     },
     {
@@ -37,15 +37,15 @@
       "title": "MedExtract – Medical Data Extraction Platform",
       "client": "Research Organization",
       "duration": "2024",
-      "description": "Automating extraction of hundreds of domain-specific structured data fields from medicine-related documents using AI.",
+      "description": "Automated extraction pipeline for structured extraction of domain-specific fields from scientific literature, enabling large-scale curation and downstream analytical workflows.",
       "tech": ["Azure OpenAI", "Azure Document Intelligence", "GPT-4.1-mini", "FastAPI", "PostgreSQL", "Azure Blob Storage"]
     },
     {
       "id": 6,
-      "title": "ScriptMaster – AI-Powered Script Writing Assistant",
+      "title": "ScriptMaster — Collaborative Script & Story Generation",
       "client": "Media Technology Client",
       "duration": "2024",
-      "description": "Collaborative AI script writing tool leveraging LLMs and RAG to generate story narratives, character arcs, beat sheets, and screenplay components through conversational workflows.",
+      "description": "AI-assisted creative tooling for collaborative story development, generating narrative outlines, character sketches, and screenplay components via conversational workflows and retrieval-augmented generation.",
       "tech": ["LangGraph", "Azure OpenAI", "RAG", "Redis", "Celery", "Docker"]
     }
   ],
