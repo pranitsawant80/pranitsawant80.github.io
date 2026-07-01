@@ -33,14 +33,10 @@ python -m http.server 8000
 ### 3. Add Images
 ```
 images/
-├── avatar/
-│   └── profile.png
-├── testimonials/
-│   ├── rohan-singh.jpg
-│   ├── dhruv-jain.jpg
-│   └── kartik-deshpande.jpg
-└── projects/
-    └── [project-specific images]
+├── male_icon.png
+├── female_icon.png
+└── myphoto.png
+
 ```
 
 ---
@@ -151,17 +147,19 @@ npm run build  # (when configured)
 ```
 .
 ├── index.html          # Main HTML structure
-├── style.css           # All styling (variables + components)
-├── script.js           # JavaScript functionality
-├── images/             # All images (organize by type)
+├── css/                # All styling files
+│   └── style.css
+├── js/                 # JavaScript functionality
+│   └── script.js
+├── assets/             # Static assets (images, icons)
+├── data/               # Optional content/data files
+├── docs/               # Project documentation
+│   ├── CODEBASE_REVIEW.md
+│   └── ARCHITECTURE.md
 ├── README.md           # Project overview
 ├── SETUP.md            # This file
-├── CODEBASE_REVIEW.md  # Architecture & recommendations
-├── package.json        # Project metadata (optional)
 ├── .gitignore          # Git ignore rules
-└── .git/               # Version control
 ```
-
 ---
 
 ## 🔐 Security
@@ -182,16 +180,6 @@ npm run build  # (when configured)
 - Lazy loading ready (for future)
 
 ---
-
-## 🤝 Contributing (For Yourself or Team)
-
-1. Create a feature branch: `git checkout -b feature/add-blog`
-2. Make changes
-3. Test locally
-4. Commit: `git commit -m "Add blog section"`
-5. Push: `git push origin feature/add-blog`
-6. Submit PR on GitHub
-
 ---
 
 ## 📞 Support & Questions
@@ -204,4 +192,3 @@ If something breaks:
 
 ---
 
-**Last Updated:** 2026-06-30
