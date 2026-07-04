@@ -183,6 +183,30 @@ nav.scrolled {
   gap: 0.75rem;
 }
 
+.nav-status {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+
+.nav-status-label {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.live-clock {
+  color: var(--muted);
+}
+
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -887,6 +911,7 @@ nav.scrolled {
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 100%;
   padding: 1rem 1.25rem;
   background: var(--bg);
   border: 1px solid var(--border);
@@ -894,6 +919,9 @@ nav.scrolled {
   text-decoration: none;
   color: var(--text);
   font-size: 0.875rem;
+  text-align: left;
+  appearance: none;
+  cursor: pointer;
   transition: border-color var(--transition), background var(--transition);
 }
 
@@ -936,11 +964,76 @@ nav.scrolled {
    ============================================================ */
 footer {
   padding: 2rem;
-  text-align: center;
   border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: 0.8rem;
   font-family: var(--mono);
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.location-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(2, 6, 23, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.location-modal.open {
+  display: flex;
+}
+
+.location-modal-panel {
+  position: relative;
+  width: min(860px, 100%);
+  max-height: 90vh;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 1.25rem;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+}
+
+.location-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.location-modal-header {
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+}
+
+.location-modal-header h3 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.location-modal iframe {
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+  border-radius: 16px;
 }
 
 /* ============================================================
@@ -994,6 +1087,14 @@ footer {
 
   .nav-toggle {
     display: block;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .nav-status {
+    display: none;
   }
 
   .nav-brand {

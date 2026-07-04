@@ -217,7 +217,36 @@ document.addEventListener('DOMContentLoaded', async () => {
   updateNavBackground();
 
   /* ----------------------------------------------------------
-     4. THEME TOGGLE
+     4. LIVE CLOCK + VISITOR COUNT
+     ---------------------------------------------------------- */
+
+  const liveClockEl = document.getElementById('live-clock');
+
+  function updateLiveClock() {
+    if (!liveClockEl) return;
+
+    const now = new Date();
+    const datePart = now.toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'short'
+    });
+    const dayPart = now.toLocaleDateString('en-US', {
+      weekday: 'short'
+    });
+    const timePart = now.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
+
+    liveClockEl.textContent = `${datePart}, ${dayPart}, ${timePart}`;
+  }
+
+  updateLiveClock();
+  setInterval(updateLiveClock, 1000);
+
+  /* ----------------------------------------------------------
+     5. THEME TOGGLE
      ---------------------------------------------------------- */
 
   const themeToggle = document.querySelector('.theme-toggle');
@@ -243,7 +272,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   /* ----------------------------------------------------------
-     5. AVATAR LIGHTBOX / MODAL
+     6. AVATAR LIGHTBOX / MODAL
      ---------------------------------------------------------- */
 
   const avatarTrigger = document.querySelector('.nav-avatar');
@@ -278,7 +307,42 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   /* ----------------------------------------------------------
-     6. RENDER DYNAMIC CONTENT
+     7. LOCATION MAP MODAL
+     ---------------------------------------------------------- */
+
+  const locationTrigger = document.querySelector('.location-trigger');
+  const locationModal = document.getElementById('location-modal');
+  const locationClose = document.querySelector('.location-modal-close');
+
+  function closeLocationModal() {
+    if (!locationModal) return;
+    locationModal.classList.remove('open');
+    locationModal.setAttribute('aria-hidden', 'true');
+  }
+
+  if (locationTrigger && locationModal && locationClose) {
+    locationTrigger.addEventListener('click', () => {
+      locationModal.classList.add('open');
+      locationModal.setAttribute('aria-hidden', 'false');
+    });
+
+    locationClose.addEventListener('click', closeLocationModal);
+
+    locationModal.addEventListener('click', (event) => {
+      if (event.target === locationModal) {
+        closeLocationModal();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeLocationModal();
+      }
+    });
+  }
+
+  /* ----------------------------------------------------------
+     8. RENDER DYNAMIC CONTENT
      ---------------------------------------------------------- */
 
   renderProjects();
