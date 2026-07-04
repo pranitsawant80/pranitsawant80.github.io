@@ -22,7 +22,7 @@ Repository structure
 - `myphoto.png` — profile image 
 
 Run locally
-1. Open `index.html` directly in your browser.
+1. Open `index.html` directly in your browser. 
 2. Or serve via a local HTTP server (recommended to avoid font/CORS issues):
 
 ```bash
