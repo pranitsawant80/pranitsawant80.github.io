@@ -3,7 +3,7 @@
 Personal portfolio website showcasing projects, experience, and technical skills.
 
 Live demo
-- https://pranitsawant80.github.io 
+- https://pranitsawant80.github.io  
 
 Summary
 - Simple, responsive single-page portfolio built with HTML, CSS and vanilla JavaScript.
