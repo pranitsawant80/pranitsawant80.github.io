@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       });
     });
   }
-
+     
   const sections = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
