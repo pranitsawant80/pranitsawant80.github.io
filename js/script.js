@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     projects: [],
     testimonials: [],
     experience: [],
+    education: [],
     skills: []
   };
 
@@ -89,6 +90,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyRevealAnimations();
   }
 
+  function renderEducation() {
+    const container = document.querySelector('[data-container="education"]');
+    if (!container || !contentData.education.length) return;
+
+    container.innerHTML = contentData.education.map(item => `
+      <div class="education-card reveal">
+        <div>
+          <div class="education-degree">${item.degree}</div>
+          <div class="education-institution">${item.institution}</div>
+        </div>
+        <div class="education-meta">
+          <div>${item.period}</div>
+          <div class="education-grade">${item.grade}</div>
+        </div>
+      </div>
+    `).join('');
+
+    applyRevealAnimations();
+  }
+
   function renderSkills() {
     const container = document.querySelector('[data-container="skills"]');
     if (!container || !contentData.skills.length) return;
@@ -104,6 +125,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     applyRevealAnimations();
   }
+
+  renderEducation();
+  renderProjects();
+  renderTestimonials();
+  renderExperience();
+  renderSkills();
 
   /* ----------------------------------------------------------
      1. NAVIGATION
@@ -163,6 +190,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       '.project-card',
       '.skill-group',
       '.timeline-item',
+      '.education-card',
       '.stat-card',
       '.award-badge',
       '.testimonial-card',

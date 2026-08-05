@@ -651,6 +651,60 @@ nav.scrolled {
 }
 
 /* ============================================================
+   EDUCATION
+   ============================================================ */
+.education-bg {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.education-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.education-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.education-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.education-degree {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.education-institution {
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.education-meta {
+  font-family: var(--mono);
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: right;
+  min-width: 180px;
+}
+
+.education-grade {
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+/* ============================================================
    EXPERIENCE / TIMELINE
    ============================================================ */
 .experience-bg {

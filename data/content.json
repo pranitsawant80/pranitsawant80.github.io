@@ -122,6 +122,22 @@
       "description": "Data analysis and ML model implementation with a focus on NLP and Predictive Analytics for EdTech content."
     }
   ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "Vellore Institute of Technology",
+      "degree": "Master's degree, Data Science",
+      "period": "Sep 2022 – Jun 2024",
+      "grade": "Grade: 9.38"
+    },
+    {
+      "id": 2,
+      "institution": "University of Mumbai",
+      "degree": "Bachelor's degree, Mathematics",
+      "period": "Jun 2016 – May 2019",
+      "grade": "Grade: 9.31"
+    }
+  ],
   "skills": [
     {
       "category": "AI / Generative AI",
