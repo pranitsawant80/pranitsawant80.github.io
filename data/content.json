@@ -1,12 +1,12 @@
 {
   "projects": [
-    {
+   {
       "id": 1,
-      "title": "DocumentIQ — Intelligent Utility Document Processing",
-      "client": "Utility Client",
+      "title": "MedExtract – Medical Data Extraction Platform",
+      "client": "Research Organization",
       "duration": "2026",
-      "description": "Enterprise document intelligence platform for automated document ingestion, extraction, validation, and workflow orchestration. Implemented multi-agent pipelines and cloud-native durable orchestration to support high-throughput document processing with automated validation and exception routing.",
-      "tech": ["Azure OpenAI", "LangGraph", "Azure Durable Functions", "MCP", "FastAPI", "Docker"]
+      "description": "Automated extraction pipeline for structured extraction of domain-specific fields from scientific literature, enabling large-scale curation and downstream analytical workflows.",
+      "tech": ["Azure OpenAI", "Azure Document Intelligence", "GPT-4.1-mini", "FastAPI", "PostgreSQL", "Azure Blob Storage"]
     },
     {
       "id": 2,
@@ -18,27 +18,27 @@
     },
     {
       "id": 3,
+      "title": "DocumentIQ — Intelligent Utility Document Processing",
+      "client": "Utility Client",
+      "duration": "2025",
+      "description": "Enterprise document intelligence platform for automated document ingestion, extraction, validation, and workflow orchestration. Implemented multi-agent pipelines and cloud-native durable orchestration to support high-throughput document processing with automated validation and exception routing.",
+      "tech": ["Azure OpenAI", "LangGraph", "Azure Durable Functions", "MCP", "FastAPI", "Docker"]
+    },
+    {
+      "id": 4,
       "title": "IntelliPredict — Conversational AutoML & Predictive Analytics",
       "client": "Global Healthcare Client",
-      "duration": "2025",
+      "duration": "2024–2025",
       "description": "Natural-language-driven platform that generates, trains, and deploys predictive models from user queries, enabling non-technical users to run forecasts and classification tasks without writing code.",
       "tech": ["Gemini Pro", "LangChain", "FastAPI", "PostgreSQL", "SQLAlchemy", "GCP"]
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "HealthVertex — Conversational Enterprise Analytics",
       "client": "Global Healthcare Client",
-      "duration": "2024–2025",
+      "duration": "2024",
       "description": "Conversational analytics service that translates business questions into optimized SQL and executes them across enterprise-scale databases using semantic retrieval and reusable knowledge repositories.",
       "tech": ["Gemini Pro", "LangGraph", "ChromaDB", "NL2SQL", "FastAPI", "PostgreSQL"]
-    },
-    {
-      "id": 5,
-      "title": "MedExtract – Medical Data Extraction Platform",
-      "client": "Research Organization",
-      "duration": "2024",
-      "description": "Automated extraction pipeline for structured extraction of domain-specific fields from scientific literature, enabling large-scale curation and downstream analytical workflows.",
-      "tech": ["Azure OpenAI", "Azure Document Intelligence", "GPT-4.1-mini", "FastAPI", "PostgreSQL", "Azure Blob Storage"]
     },
     {
       "id": 6,
