@@ -55,21 +55,21 @@
       "name": "Rohan Singh",
       "title": "Lead Data Scientist",
       "quote": "Pranit excels at understanding business problems and translating them into effective AI-driven solutions. He combines strong problem-solving skills with the ability to explain complex concepts in a simple, client-friendly way. A dependable team player, he consistently delivers high-quality solutions on time.",
-      "image": "assets/images/male_icon.png"
+      "image": "assets/images/male_icon.jpg"
     },
     {
       "id": 2,
       "name": "Dhruv Jain",
       "title": "Software Engineer",
       "quote": "Pranit is a highly skilled AI and Data Science professional with a hands-on approach to solving complex challenges. His technical expertise, collaborative mindset, and willingness to share knowledge make him a reliable teammate and a valuable contributor to any project.",
-      "image": "assets/images/male_icon.png"
+      "image": "assets/images/male_icon.jpg"
     },
     {
       "id": 3,
       "name": "Kartik Deshpande",
       "title": "AI & Technology Leader",
       "quote": "Pranit consistently delivers high-quality AI solutions with strong technical expertise, excellent communication, and a proactive approach to learning. He quickly adapts to new domains, presents complex ideas with clarity, and combines independent problem-solving with effective teamwork to achieve outstanding project outcomes.",
-      "image": "assets/images/male_icon.png"
+      "image": "assets/images/male_icon.jpg"
     }
   ],
   "experience": [

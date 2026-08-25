@@ -336,6 +336,7 @@ nav.scrolled {
   width: 700px; height: 700px;
   background: radial-gradient(circle, var(--hero-glow-1) 0%, transparent 70%);
   pointer-events: none;
+  animation: heroDrift 16s ease-in-out infinite alternate;
 }
 
 .hero::after {
@@ -345,6 +346,14 @@ nav.scrolled {
   width: 500px; height: 500px;
   background: radial-gradient(circle, var(--hero-glow-2) 0%, transparent 70%);
   pointer-events: none;
+  animation: heroDrift 20s ease-in-out infinite alternate;
+  animation-delay: -6s;
+}
+
+@keyframes heroDrift {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-30px, 25px) scale(1.08); }
+  100% { transform: translate(25px, -20px) scale(0.96); }
 }
 
 .hero-inner {
@@ -374,6 +383,21 @@ nav.scrolled {
   display: block;
   width: 32px; height: 1px;
   background: var(--accent);
+}
+
+.hero-rotate-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  margin-left: 2px;
+  background: var(--accent2);
+  vertical-align: -0.1em;
+  animation: cursorBlink 0.9s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 50%  { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
 }
 
 .hero-desc {
@@ -1202,10 +1226,17 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .hero-content,
   .hero-stats,
-  .reveal {
+  .reveal,
+  .hero::before,
+  .hero::after,
+  .hero-rotate-cursor {
     animation: none;
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .hero-rotate-cursor {
+    display: none;
   }
 }

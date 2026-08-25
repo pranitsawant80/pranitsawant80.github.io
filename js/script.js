@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <p class="testimonial-quote">"${testimonial.quote}"</p>
         </div>
         <div class="testimonial-author">
-          <img src="${testimonial.image}" alt="${testimonial.name}" class="testimonial-avatar" onerror="this.src='assets/images/placeholder.jpg'">
+          <img src="${testimonial.image}" alt="${testimonial.name}" class="testimonial-avatar" loading="lazy" onerror="this.onerror=null;this.src='assets/images/male_icon.jpg'">
           <div class="testimonial-info">
             <div class="testimonial-name">${testimonial.name}</div>
             <div class="testimonial-title">${testimonial.title}</div>
@@ -378,6 +378,103 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderExperience();
   renderSkills();
   applyRevealAnimations();
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ----------------------------------------------------------
+     9. HERO ROTATING HEADLINE
+     ---------------------------------------------------------- */
+
+  const heroRotateEl = document.getElementById('hero-rotate');
+  const heroPhrases = [
+    'intelligent systems',
+    'agentic AI platforms',
+    'LLM-powered products',
+    'enterprise AI solutions'
+  ];
+
+  function typewriteHero() {
+    if (!heroRotateEl) return;
+
+    let phraseIndex = 0;
+    let charIndex = heroRotateEl.textContent.length;
+    let deleting = false;
+
+    function tick() {
+      const phrase = heroPhrases[phraseIndex];
+
+      if (!deleting) {
+        charIndex++;
+        heroRotateEl.textContent = phrase.slice(0, charIndex);
+        if (charIndex >= phrase.length) {
+          deleting = true;
+          setTimeout(tick, 1800);
+          return;
+        }
+      } else {
+        charIndex--;
+        heroRotateEl.textContent = phrase.slice(0, charIndex);
+        if (charIndex <= 0) {
+          deleting = false;
+          phraseIndex = (phraseIndex + 1) % heroPhrases.length;
+        }
+      }
+
+      setTimeout(tick, deleting ? 35 : 55);
+    }
+
+    charIndex = 0;
+    setTimeout(tick, 1400);
+  }
+
+  if (heroRotateEl) {
+    if (prefersReducedMotion) {
+      heroRotateEl.textContent = heroPhrases[0];
+    } else {
+      typewriteHero();
+    }
+  }
+
+  /* ----------------------------------------------------------
+     10. ANIMATED STAT COUNTERS
+     ---------------------------------------------------------- */
+
+  function animateStatCounters() {
+    document.querySelectorAll('.stat-num').forEach((el, index) => {
+      const match = el.textContent.match(/^(\d+)(.*)$/);
+      if (!match) return;
+
+      const target = parseInt(match[1], 10);
+      const suffix = match[2];
+
+      if (prefersReducedMotion) {
+        el.textContent = `${target}${suffix}`;
+        return;
+      }
+
+      const duration = 1100;
+      const startDelay = index * 80;
+
+      setTimeout(() => {
+        const startTime = performance.now();
+
+        function frame(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = Math.round(target * eased);
+          el.textContent = `${current}${suffix}`;
+
+          if (progress < 1) {
+            requestAnimationFrame(frame);
+          }
+        }
+
+        requestAnimationFrame(frame);
+      }, startDelay);
+    });
+  }
+
+  animateStatCounters();
 
   console.log('Portfolio loaded ✓');
 });
