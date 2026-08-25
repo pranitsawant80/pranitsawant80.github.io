@@ -27,17 +27,20 @@ python -m http.server 8000
 
 ### 2. Update Content
 - **Text/Bio:** Edit directly in `index.html`
-- **Colors/Fonts:** Modify CSS variables in `style.css` (`:root` section)
+- **Colors/Fonts:** Modify CSS variables in `css/style.css` (`:root` section)
 - **Add New Section:** Copy existing section structure and update IDs
+- **Projects, Skills, Experience, Education, Testimonials:** Edit `data/content.json` — these sections are rendered client-side by `js/script.js`, not hardcoded in `index.html`
 
 ### 3. Add Images
 ```
-images/
-├── male_icon.png
-├── female_icon.png
-└── myphoto.png
-
+assets/images/
+├── myphoto.jpg          # profile photo (nav avatar, popover, OG image)
+├── male_icon.jpg        # testimonial avatar
+├── favicon.svg          # browser tab icon (modern browsers)
+├── favicon.png          # browser tab icon (fallback)
+└── apple-touch-icon.png # iOS/home-screen icon
 ```
+Reference new images by path from `data/content.json` (testimonials) or directly in `index.html`.
 
 ---
 
@@ -64,20 +67,17 @@ images/
 ```
 
 ### Add New Project Card
-```html
-<!-- Copy structure from existing project-card -->
-<div class="project-card">
-  <div class="project-meta">
-    <span class="project-client">Client Name</span>
-    <span class="project-duration">Year</span>
-  </div>
-  <div class="project-title">Project Title</div>
-  <p class="project-desc">Description...</p>
-  <div class="project-tech">
-    <span class="tech-badge">Tech 1</span>
-    <span class="tech-badge">Tech 2</span>
-  </div>
-</div>
+Project cards are rendered from `data/content.json`, not written directly in `index.html`. Add a new object to the `projects` array:
+```json
+{
+  "id": 7,
+  "title": "Project Title",
+  "client": "Client Name",
+  "duration": "Year",
+  "description": "Description...",
+  "tech": ["Tech 1", "Tech 2"]
+}
+```
 ```
 
 ---
@@ -151,11 +151,15 @@ npm run build  # (when configured)
 │   └── style.css
 ├── js/                 # JavaScript functionality
 │   └── script.js
-├── assets/             # Static assets (images, icons)
-├── data/               # Optional content/data files
-├── README.md           # Project overview
-├── SETUP.md            # This file
-├── .gitignore          # Git ignore rules
+├── assets/
+│   └── images/         # Photos, testimonial avatars, favicon assets
+├── data/
+│   └── content.json    # Projects, skills, experience, education, testimonials
+├── sitemap.xml          # SEO: page listing for search engines
+├── robots.txt           # SEO: crawler rules
+├── README.md            # Project overview
+├── SETUP.md             # This file
+├── .gitignore           # Git ignore rules
 ```
 ---
 
@@ -164,17 +168,17 @@ npm run build  # (when configured)
 - ✅ No sensitive data in code (emails used are public)
 - ✅ No backend vulnerabilities (static site)
 - ✅ HTTPS enabled by default (GitHub Pages)
-- ✅ No external scripts (except Google Fonts)
+- ✅ Only external scripts are Google Fonts and GoatCounter (privacy-friendly analytics, no cookies)
 
 ---
 
 ## 📈 Performance Tips
 
-- Images are optimized
-- CSS is minified in production
+- Images are optimized (JPEG, resized to display size)
+- No build/minify step — CSS and JS are served as-authored
 - JavaScript uses passive event listeners
 - Smooth scrolling uses CSS (not JS)
-- Lazy loading ready (for future)
+- Below-the-fold images (`loading="lazy"`) are lazy-loaded
 
 ---
 ---
@@ -183,9 +187,8 @@ npm run build  # (when configured)
 
 If something breaks:
 1. Check browser console (F12)
-2. Review CODEBASE_REVIEW.md for architecture
-3. Look at existing similar sections as examples
-4. Test in different browser
+2. Look at existing similar sections as examples
+3. Test in different browser
 
 ---
 

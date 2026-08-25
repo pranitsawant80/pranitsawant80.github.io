@@ -45,3 +45,5 @@ yarn-error.log*
 .settings/
 
 REVIEW_SUMMARY.md
+
+docs/notes.txt

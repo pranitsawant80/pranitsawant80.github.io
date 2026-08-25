@@ -14,12 +14,15 @@ Tech stack
 - CSS (custom properties, responsive layout)
 - JavaScript (vanilla)
 - Google Fonts
+- GoatCounter (privacy-friendly analytics + visitor count)
 
 Repository structure
 - `index.html` — main site markup
-- `style.css` — global styles
-- `script.js` — interactive behavior (theme toggle, nav, reveal)
-- `myphoto.png` — profile image 
+- `css/style.css` — global styles, light/dark theme tokens
+- `js/script.js` — interactive behavior (theme toggle, nav, reveal animations, dynamic content rendering, visitor counter)
+- `data/content.json` — projects, skills, experience, education, and testimonials, rendered client-side
+- `assets/images/` — profile photo, testimonial avatars, and favicon assets
+- `sitemap.xml` / `robots.txt` — SEO crawling files
 
 Run locally
 1. Open `index.html` directly in your browser. 

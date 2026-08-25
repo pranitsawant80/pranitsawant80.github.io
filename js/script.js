@@ -369,20 +369,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  /* ----------------------------------------------------------
-     8. RENDER DYNAMIC CONTENT
-     ---------------------------------------------------------- */
-
-  renderProjects();
-  renderTestimonials();
-  renderExperience();
-  renderSkills();
-  applyRevealAnimations();
-
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ----------------------------------------------------------
-     9. HERO ROTATING HEADLINE
+     8. HERO ROTATING HEADLINE
      ---------------------------------------------------------- */
 
   const heroRotateEl = document.getElementById('hero-rotate');
@@ -436,7 +426,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   /* ----------------------------------------------------------
-     10. ANIMATED STAT COUNTERS
+     9. ANIMATED STAT COUNTERS
      ---------------------------------------------------------- */
 
   function animateStatCounters() {
@@ -477,7 +467,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   animateStatCounters();
 
   /* ----------------------------------------------------------
-     11. VISITOR COUNTER (GoatCounter)
+     10. VISITOR COUNTER (GoatCounter)
      ---------------------------------------------------------- */
 
   const visitorCountEl = document.getElementById('visitor-count');
