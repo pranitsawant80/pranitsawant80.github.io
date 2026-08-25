@@ -1070,6 +1070,27 @@ footer {
   font-family: var(--mono);
 }
 
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.visitor-counter-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.visitor-counter-value {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
 .footer-content {
   max-width: 1100px;
   margin: 0 auto;

@@ -476,5 +476,24 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   animateStatCounters();
 
+  /* ----------------------------------------------------------
+     11. VISITOR COUNTER (GoatCounter)
+     ---------------------------------------------------------- */
+
+  const visitorCountEl = document.getElementById('visitor-count');
+
+  if (visitorCountEl) {
+    fetch('https://pranitsawant.goatcounter.com/counter/TOTAL.json')
+      .then(res => (res.ok ? res.json() : Promise.reject()))
+      .then(data => {
+        const count = Number(data.count_unique);
+        visitorCountEl.textContent = Number.isFinite(count) ? count.toLocaleString() : '—';
+      })
+      .catch(() => {
+        const wrapper = visitorCountEl.closest('.visitor-counter');
+        if (wrapper) wrapper.style.display = 'none';
+      });
+  }
+
   console.log('Portfolio loaded ✓');
 });
