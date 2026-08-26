@@ -27,110 +27,78 @@ document.addEventListener('DOMContentLoaded', async () => {
      Render Functions for Dynamic Content
      ---------------------------------------------------------- */
 
-  function renderProjects() {
-    const container = document.querySelector('[data-container="projects"]');
-    if (!container || !contentData.projects.length) return;
+  function renderList(containerName, items, templateFn) {
+    const container = document.querySelector(`[data-container="${containerName}"]`);
+    if (!container || !items.length) return;
 
-    container.innerHTML = contentData.projects.map(project => `
-      <div class="project-card reveal">
-        <div class="project-meta">
-          <span class="project-client">${project.client}</span>
-          <span class="project-duration">${project.duration}</span>
-        </div>
-        <div class="project-title">${project.title}</div>
-        <p class="project-desc">${project.description}</p>
-        <div class="project-tech">
-          ${project.tech.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
-        </div>
-      </div>
-    `).join('');
+    container.innerHTML = items.map(templateFn).join('');
 
     // Re-apply reveal animations to new elements
     applyRevealAnimations();
   }
 
-  function renderTestimonials() {
-    const container = document.querySelector('[data-container="testimonials"]');
-    if (!container || !contentData.testimonials.length) return;
+  renderList('education', contentData.education, item => `
+    <div class="education-card reveal">
+      <div>
+        <div class="education-degree">${item.degree}</div>
+        <div class="education-institution">${item.institution}</div>
+      </div>
+      <div class="education-meta">
+        <div>${item.period}</div>
+        <div class="education-grade">${item.grade}</div>
+      </div>
+    </div>
+  `);
 
-    container.innerHTML = contentData.testimonials.map(testimonial => `
-      <div class="testimonial-card reveal">
-        <div class="testimonial-content">
-          <p class="testimonial-quote">"${testimonial.quote}"</p>
-        </div>
-        <div class="testimonial-author">
-          <img src="${testimonial.image}" alt="${testimonial.name}" class="testimonial-avatar" loading="lazy" onerror="this.onerror=null;this.src='assets/images/male_icon.jpg'">
-          <div class="testimonial-info">
-            <div class="testimonial-name">${testimonial.name}</div>
-            <div class="testimonial-title">${testimonial.title}</div>
-          </div>
+  renderList('projects', contentData.projects, project => `
+    <div class="project-card reveal">
+      <div class="project-meta">
+        <span class="project-client">${project.client}</span>
+        <span class="project-duration">${project.duration}</span>
+      </div>
+      <div class="project-title">${project.title}</div>
+      <p class="project-desc">${project.description}</p>
+      <div class="project-tech">
+        ${project.tech.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+      </div>
+    </div>
+  `);
+
+  renderList('testimonials', contentData.testimonials, testimonial => `
+    <div class="testimonial-card reveal">
+      <div class="testimonial-content">
+        <p class="testimonial-quote">"${testimonial.quote}"</p>
+      </div>
+      <div class="testimonial-author">
+        <img src="${testimonial.image}" alt="${testimonial.name}" class="testimonial-avatar" loading="lazy" onerror="this.onerror=null;this.src='assets/images/male_icon.jpg'">
+        <div class="testimonial-info">
+          <div class="testimonial-name">${testimonial.name}</div>
+          <div class="testimonial-title">${testimonial.title}</div>
         </div>
       </div>
-    `).join('');
+    </div>
+  `);
 
-    applyRevealAnimations();
-  }
-
-  function renderExperience() {
-    const container = document.querySelector('[data-container="experience"]');
-    if (!container || !contentData.experience.length) return;
-
-    container.innerHTML = contentData.experience.map(job => `
-      <div class="timeline-item reveal">
-        <div class="timeline-date">${job.startDate} – ${job.endDate}</div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-role">${job.role}</div>
-          <div class="timeline-company">${job.company}</div>
-          <p class="timeline-desc">${job.description}</p>
-        </div>
+  renderList('experience', contentData.experience, job => `
+    <div class="timeline-item reveal">
+      <div class="timeline-date">${job.startDate} – ${job.endDate}</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-role">${job.role}</div>
+        <div class="timeline-company">${job.company}</div>
+        <p class="timeline-desc">${job.description}</p>
       </div>
-    `).join('');
+    </div>
+  `);
 
-    applyRevealAnimations();
-  }
-
-  function renderEducation() {
-    const container = document.querySelector('[data-container="education"]');
-    if (!container || !contentData.education.length) return;
-
-    container.innerHTML = contentData.education.map(item => `
-      <div class="education-card reveal">
-        <div>
-          <div class="education-degree">${item.degree}</div>
-          <div class="education-institution">${item.institution}</div>
-        </div>
-        <div class="education-meta">
-          <div>${item.period}</div>
-          <div class="education-grade">${item.grade}</div>
-        </div>
+  renderList('skills', contentData.skills, skillGroup => `
+    <div class="skill-group reveal">
+      <div class="skill-group-title">${skillGroup.category}</div>
+      <div class="tags">
+        ${skillGroup.items.map(item => `<span class="tag">${item}</span>`).join('')}
       </div>
-    `).join('');
-
-    applyRevealAnimations();
-  }
-
-  function renderSkills() {
-    const container = document.querySelector('[data-container="skills"]');
-    if (!container || !contentData.skills.length) return;
-
-    container.innerHTML = contentData.skills.map(skillGroup => `
-      <div class="skill-group reveal">
-        <div class="skill-group-title">${skillGroup.category}</div>
-        <div class="tags">
-          ${skillGroup.items.map(item => `<span class="tag">${item}</span>`).join('')}
-        </div>
-      </div>
-    `).join('');
-
-    applyRevealAnimations();
-  }
-
-  renderEducation();
-  renderProjects();
-  renderTestimonials();
-  renderExperience();
-  renderSkills();
+    </div>
+  `);
 
   /* ----------------------------------------------------------
      1. NAVIGATION
@@ -300,74 +268,48 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   /* ----------------------------------------------------------
-     6. AVATAR LIGHTBOX / MODAL
+     6. MODALS (avatar lightbox + location map)
      ---------------------------------------------------------- */
 
-  const avatarTrigger = document.querySelector('.nav-avatar');
-  const avatarModal = document.querySelector('.avatar-modal');
-  const avatarClose = document.querySelector('.avatar-modal-close');
+  function setupModal(trigger, modal, closeBtn) {
+    if (!trigger || !modal || !closeBtn) return;
 
-  function closeAvatarModal() {
-    if (!avatarModal) return;
-    avatarModal.classList.remove('open');
-    avatarModal.setAttribute('aria-hidden', 'true');
-  }
+    function close() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
 
-  if (avatarTrigger && avatarModal && avatarClose) {
-    avatarTrigger.addEventListener('click', () => {
-      avatarModal.classList.add('open');
-      avatarModal.setAttribute('aria-hidden', 'false');
+    trigger.addEventListener('click', () => {
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
     });
 
-    avatarClose.addEventListener('click', closeAvatarModal);
+    closeBtn.addEventListener('click', close);
 
-    avatarModal.addEventListener('click', (event) => {
-      if (event.target === avatarModal) {
-        closeAvatarModal();
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        close();
       }
     });
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
-        closeAvatarModal();
+        close();
       }
     });
   }
 
-  /* ----------------------------------------------------------
-     7. LOCATION MAP MODAL
-     ---------------------------------------------------------- */
+  setupModal(
+    document.querySelector('.nav-avatar'),
+    document.querySelector('.avatar-modal'),
+    document.querySelector('.avatar-modal-close')
+  );
 
-  const locationTrigger = document.querySelector('.location-trigger');
-  const locationModal = document.getElementById('location-modal');
-  const locationClose = document.querySelector('.location-modal-close');
-
-  function closeLocationModal() {
-    if (!locationModal) return;
-    locationModal.classList.remove('open');
-    locationModal.setAttribute('aria-hidden', 'true');
-  }
-
-  if (locationTrigger && locationModal && locationClose) {
-    locationTrigger.addEventListener('click', () => {
-      locationModal.classList.add('open');
-      locationModal.setAttribute('aria-hidden', 'false');
-    });
-
-    locationClose.addEventListener('click', closeLocationModal);
-
-    locationModal.addEventListener('click', (event) => {
-      if (event.target === locationModal) {
-        closeLocationModal();
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        closeLocationModal();
-      }
-    });
-  }
+  setupModal(
+    document.querySelector('.location-trigger'),
+    document.getElementById('location-modal'),
+    document.querySelector('.location-modal-close')
+  );
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
