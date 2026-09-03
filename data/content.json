@@ -1,12 +1,19 @@
 {
   "projects": [
-   {
+    {
       "id": 1,
       "title": "MedExtract – Medical Data Extraction Platform",
       "client": "Research Organization",
       "duration": "2026",
       "description": "Automated extraction pipeline for structured extraction of domain-specific fields from scientific literature, enabling large-scale curation and downstream analytical workflows.",
-      "tech": ["Azure OpenAI", "Azure Document Intelligence", "GPT-4.1-mini", "FastAPI", "PostgreSQL", "Azure Blob Storage"]
+      "tech": [
+        "Azure OpenAI",
+        "Azure Document Intelligence",
+        "GPT-4.1-mini",
+        "FastAPI",
+        "PostgreSQL",
+        "Azure Blob Storage"
+      ]
     },
     {
       "id": 2,
@@ -14,7 +21,14 @@
       "client": "Healthcare Client",
       "duration": "2025",
       "description": "Multimodal video analytics system for healthcare operations, delivering compliance monitoring, real-time anomaly detection, workflow analytics, and automated reporting to improve safety and operational efficiency.",
-      "tech": ["Gemini 1.5 Pro", "GCP", "Vertex AI", "Kubernetes", "OpenCV", "BigQuery"]
+      "tech": [
+        "Gemini 1.5 Pro",
+        "GCP",
+        "Vertex AI",
+        "Kubernetes",
+        "OpenCV",
+        "BigQuery"
+      ]
     },
     {
       "id": 3,
@@ -22,7 +36,14 @@
       "client": "Utility Client",
       "duration": "2025",
       "description": "Enterprise document intelligence platform for automated document ingestion, extraction, validation, and workflow orchestration. Implemented multi-agent pipelines and cloud-native durable orchestration to support high-throughput document processing with automated validation and exception routing.",
-      "tech": ["Azure OpenAI", "LangGraph", "Azure Durable Functions", "MCP", "FastAPI", "Docker"]
+      "tech": [
+        "Azure OpenAI",
+        "LangGraph",
+        "Azure Durable Functions",
+        "MCP",
+        "FastAPI",
+        "Docker"
+      ]
     },
     {
       "id": 4,
@@ -30,7 +51,14 @@
       "client": "Global Healthcare Client",
       "duration": "2024–2025",
       "description": "Natural-language-driven platform that generates, trains, and deploys predictive models from user queries, enabling non-technical users to run forecasts and classification tasks without writing code.",
-      "tech": ["Gemini Pro", "LangChain", "FastAPI", "PostgreSQL", "SQLAlchemy", "GCP"]
+      "tech": [
+        "Gemini Pro",
+        "LangChain",
+        "FastAPI",
+        "PostgreSQL",
+        "SQLAlchemy",
+        "GCP"
+      ]
     },
     {
       "id": 5,
@@ -38,7 +66,14 @@
       "client": "Global Healthcare Client",
       "duration": "2024",
       "description": "Conversational analytics service that translates business questions into optimized SQL and executes them across enterprise-scale databases using semantic retrieval and reusable knowledge repositories.",
-      "tech": ["Gemini Pro", "LangGraph", "ChromaDB", "NL2SQL", "FastAPI", "PostgreSQL"]
+      "tech": [
+        "Gemini Pro",
+        "LangGraph",
+        "ChromaDB",
+        "NL2SQL",
+        "FastAPI",
+        "PostgreSQL"
+      ]
     },
     {
       "id": 6,
@@ -46,7 +81,14 @@
       "client": "Media Technology Client",
       "duration": "2024",
       "description": "AI-assisted creative tooling for collaborative story development, generating narrative outlines, character sketches, and screenplay components via conversational workflows and retrieval-augmented generation.",
-      "tech": ["LangGraph", "Azure OpenAI", "RAG", "Redis", "Celery", "Docker"]
+      "tech": [
+        "LangGraph",
+        "Azure OpenAI",
+        "RAG",
+        "Redis",
+        "Celery",
+        "Docker"
+      ]
     }
   ],
   "testimonials": [
@@ -69,6 +111,13 @@
       "name": "Kartik Deshpande",
       "title": "AI & Technology Leader",
       "quote": "Pranit consistently delivers high-quality AI solutions with strong technical expertise, excellent communication, and a proactive approach to learning. He quickly adapts to new domains, presents complex ideas with clarity, and combines independent problem-solving with effective teamwork to achieve outstanding project outcomes.",
+      "image": "assets/images/male_icon.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Rahul Pidkalwar",
+      "title": "Machine Learning Engineer",
+      "quote": "Pranit is someone who is always looking for better ways to solve problems instead of settling for the first solution. He asks the right questions, pays attention to the details, and takes genuine ownership of his work. He's a pleasure to collaborate with and a valuable addition to any team.",
       "image": "assets/images/male_icon.jpg"
     }
   ],
@@ -141,31 +190,89 @@
   "skills": [
     {
       "category": "AI / Generative AI",
-      "items": ["LangChain", "LangGraph", "RAG", "Agentic AI", "MCP", "GPT-4o", "Gemini Pro", "Azure OpenAI", "Prompt Engineering", "RAGAS", "Multi-Agent Systems"]
+      "items": [
+        "LangChain",
+        "LangGraph",
+        "RAG",
+        "Agentic AI",
+        "MCP",
+        "GPT-4o",
+        "Gemini Pro",
+        "Azure OpenAI",
+        "Prompt Engineering",
+        "RAGAS",
+        "Multi-Agent Systems"
+      ]
     },
     {
       "category": "Cloud Platforms",
-      "items": ["Microsoft Azure", "GCP", "Azure OpenAI", "Azure AI Foundry", "Azure Durable Functions", "Azure Document Intelligence", "Vertex AI", "Azure Blob Storage", "GCP Pub/Sub"]
+      "items": [
+        "Microsoft Azure",
+        "GCP",
+        "Azure OpenAI",
+        "Azure AI Foundry",
+        "Azure Durable Functions",
+        "Azure Document Intelligence",
+        "Vertex AI",
+        "Azure Blob Storage",
+        "GCP Pub/Sub"
+      ]
     },
     {
       "category": "Backend & Infrastructure",
-      "items": ["Python", "FastAPI", "Flask", "Docker", "Kubernetes", "Redis", "Celery", "Azure Service Bus", "Microservices"]
+      "items": [
+        "Python",
+        "FastAPI",
+        "Flask",
+        "Docker",
+        "Kubernetes",
+        "Redis",
+        "Celery",
+        "Azure Service Bus",
+        "Microservices"
+      ]
     },
     {
       "category": "Databases & Storage",
-      "items": ["PostgreSQL", "MySQL", "ChromaDB", "Vector Databases", "Azure SQL", "SQLAlchemy", "BigQuery"]
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "ChromaDB",
+        "Vector Databases",
+        "Azure SQL",
+        "SQLAlchemy",
+        "BigQuery"
+      ]
     },
     {
       "category": "ML & Data Science",
-      "items": ["PyTorch", "TensorFlow", "Scikit-learn", "OpenCV", "NLP", "Predictive Analytics", "NL2SQL"]
+      "items": [
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "OpenCV",
+        "NLP",
+        "Predictive Analytics",
+        "NL2SQL"
+      ]
     },
     {
       "category": "Frontend Technologies",
-      "items": ["HTML", "CSS", "JavaScript"]
+      "items": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
     },
     {
       "category": "Domain Expertise",
-      "items": ["Healthcare Analytics", "Document Intelligence", "Conversational Analytics", "Enterprise AI", "Research & Life Sciences"]
+      "items": [
+        "Healthcare Analytics",
+        "Document Intelligence",
+        "Conversational Analytics",
+        "Enterprise AI",
+        "Research & Life Sciences"
+      ]
     }
   ]
 }
