@@ -9,10 +9,12 @@
       "tech": [
         "Azure OpenAI",
         "Azure Document Intelligence",
-        "GPT-4.1-mini",
+        "GPT-5.1-mini",
+        "Structured Outputs",
+        "Few-Shot Prompting",
+        "Pydantic",
         "FastAPI",
-        "PostgreSQL",
-        "Azure Blob Storage"
+        "PostgreSQL"
       ]
     },
     {
@@ -22,11 +24,13 @@
       "duration": "2025",
       "description": "Multimodal video analytics system for healthcare operations, delivering compliance monitoring, real-time anomaly detection, workflow analytics, and automated reporting to improve safety and operational efficiency.",
       "tech": [
+        "Gemini Flash",
         "Gemini 1.5 Pro",
-        "GCP",
         "Vertex AI",
-        "Kubernetes",
+        "LangGraph",
         "OpenCV",
+        "GKE",
+        "Pub/Sub",
         "BigQuery"
       ]
     },
@@ -39,9 +43,11 @@
       "tech": [
         "Azure OpenAI",
         "LangGraph",
+        "Multi-Agent Systems",
+        "FastMCP",
         "Azure Durable Functions",
-        "MCP",
-        "FastAPI",
+        "Azure Service Bus",
+        "Azure Container Apps",
         "Docker"
       ]
     },
@@ -54,10 +60,12 @@
       "tech": [
         "Gemini Pro",
         "LangChain",
-        "FastAPI",
-        "PostgreSQL",
+        "Tool Calling",
+        "Scikit-learn",
+        "Predictive Analytics",
         "SQLAlchemy",
-        "GCP"
+        "Celery",
+        "Vertex AI"
       ]
     },
     {
@@ -68,10 +76,12 @@
       "description": "Conversational analytics service that translates business questions into optimized SQL and executes them across enterprise-scale databases using semantic retrieval and reusable knowledge repositories.",
       "tech": [
         "Gemini Pro",
-        "LangGraph",
+        "LangChain",
         "ChromaDB",
-        "NL2SQL",
-        "FastAPI",
+        "Embeddings",
+        "Semantic Search",
+        "Intent Classification",
+        "NL-to-SQL",
         "PostgreSQL"
       ]
     },
@@ -84,7 +94,9 @@
       "tech": [
         "LangGraph",
         "Azure OpenAI",
-        "RAG",
+        "Retrieval-Augmented Generation",
+        "Prompt Engineering",
+        "Vector Search",
         "Redis",
         "Celery",
         "Docker"
