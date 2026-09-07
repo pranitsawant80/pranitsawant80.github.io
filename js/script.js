@@ -64,7 +64,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     </div>
   `);
 
-  renderList('testimonials', contentData.testimonials, testimonial => `
+  renderList('testimonials', contentData.testimonials, testimonial => {
+    const linkedinIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`;
+    const nameBlock = testimonial.linkedin
+      ? `<a class="testimonial-name testimonial-name-link" href="${testimonial.linkedin}" target="_blank" rel="noreferrer">${testimonial.name}${linkedinIcon}</a>`
+      : `<div class="testimonial-name">${testimonial.name}</div>`;
+    return `
     <div class="testimonial-card reveal">
       <div class="testimonial-content">
         <p class="testimonial-quote">"${testimonial.quote}"</p>
@@ -72,12 +77,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="testimonial-author">
         <img src="${testimonial.image}" alt="${testimonial.name}" class="testimonial-avatar" loading="lazy" onerror="this.onerror=null;this.src='assets/images/male_icon.jpg'">
         <div class="testimonial-info">
-          <div class="testimonial-name">${testimonial.name}</div>
+          ${nameBlock}
           <div class="testimonial-title">${testimonial.title}</div>
         </div>
       </div>
     </div>
-  `);
+  `;
+  });
 
   renderList('experience', contentData.experience, job => `
     <div class="timeline-item reveal">
@@ -160,7 +166,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       '.timeline-item',
       '.education-card',
       '.stat-card',
-      '.award-badge',
       '.testimonial-card',
       '.certifications-list li'
     ];
@@ -271,18 +276,22 @@ document.addEventListener('DOMContentLoaded', async () => {
      6. MODALS (avatar lightbox + location map)
      ---------------------------------------------------------- */
 
-  function setupModal(trigger, modal, closeBtn) {
-    if (!trigger || !modal || !closeBtn) return;
+  function setupModal(trigger, modal, closeBtn, onOpen) {
+    const triggers = trigger instanceof NodeList || Array.isArray(trigger)
+      ? Array.from(trigger)
+      : [trigger];
+    if (!triggers.length || !triggers[0] || !modal || !closeBtn) return;
 
     function close() {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
     }
 
-    trigger.addEventListener('click', () => {
+    triggers.forEach(t => t.addEventListener('click', () => {
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
-    });
+      if (typeof onOpen === 'function') onOpen();
+    }));
 
     closeBtn.addEventListener('click', close);
 
@@ -309,6 +318,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.querySelector('.location-trigger'),
     document.getElementById('location-modal'),
     document.querySelector('.location-modal-close')
+  );
+
+  setupModal(
+    document.querySelectorAll('[data-resume-trigger]'),
+    document.getElementById('resume-modal'),
+    document.querySelector('.resume-modal-close'),
+    () => {
+      if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+        window.goatcounter.count({ path: 'resume-request', title: 'Resume request', event: true });
+      }
+    }
   );
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

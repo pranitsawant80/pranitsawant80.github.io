@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "title": "DocumentIQ — Intelligent Utility Document Processing",
+      "title": "InvoiceIQ — Intelligent Utility Bill Processing",
       "client": "Utility Client",
       "duration": "2025",
       "description": "Enterprise document intelligence platform for automated document ingestion, extraction, validation, and workflow orchestration. Implemented multi-agent pipelines and cloud-native durable orchestration to support high-throughput document processing with automated validation and exception routing.",
@@ -109,78 +109,58 @@
       "name": "Rohan Singh",
       "title": "Lead Data Scientist",
       "quote": "Pranit excels at understanding business problems and translating them into effective AI-driven solutions. He combines strong problem-solving skills with the ability to explain complex concepts in a simple, client-friendly way. A dependable team player, he consistently delivers high-quality solutions on time.",
-      "image": "assets/images/male_icon.jpg"
+      "image": "assets/images/male_icon.jpg",
+      "linkedin": "https://www.linkedin.com/in/rohan-singh-7665bb17b/"
     },
     {
       "id": 2,
       "name": "Dhruv Jain",
       "title": "Software Engineer",
       "quote": "Pranit is a highly skilled AI and Data Science professional with a hands-on approach to solving complex challenges. His technical expertise, collaborative mindset, and willingness to share knowledge make him a reliable teammate and a valuable contributor to any project.",
-      "image": "assets/images/male_icon.jpg"
+      "image": "assets/images/male_icon.jpg",
+      "linkedin": "https://www.linkedin.com/in/dhruv-jain-678023184/"
     },
     {
       "id": 3,
       "name": "Kartik Deshpande",
       "title": "AI & Technology Leader",
       "quote": "Pranit consistently delivers high-quality AI solutions with strong technical expertise, excellent communication, and a proactive approach to learning. He quickly adapts to new domains, presents complex ideas with clarity, and combines independent problem-solving with effective teamwork to achieve outstanding project outcomes.",
-      "image": "assets/images/male_icon.jpg"
+      "image": "assets/images/male_icon.jpg",
+      "linkedin": "https://www.linkedin.com/in/kartik-deshpande-1056011b5/"
     },
     {
       "id": 4,
       "name": "Rahul Pidkalwar",
       "title": "Machine Learning Engineer",
       "quote": "Pranit is someone who is always looking for better ways to solve problems instead of settling for the first solution. He asks the right questions, pays attention to the details, and takes genuine ownership of his work. He's a pleasure to collaborate with and a valuable addition to any team.",
-      "image": "assets/images/male_icon.jpg"
+      "image": "assets/images/male_icon.jpg",
+      "linkedin": "https://www.linkedin.com/in/rahul-pidkalwar/"
     }
   ],
   "experience": [
     {
       "id": 1,
-      "startDate": "Dec 2025",
+      "startDate": "Jan 2026",
       "endDate": "Present",
-      "role": "Engineer",
+      "role": "AI Engineer",
       "company": "Nagarro",
       "description": "Building enterprise AI solutions and GenAI-powered applications for clients across geographies."
     },
     {
       "id": 2,
-      "startDate": "Jul 2025",
-      "endDate": "Jan 2026",
-      "role": "Senior Developer (AI)",
+      "startDate": "Feb 2024",
+      "endDate": "Dec 2025",
+      "role": "AI Intern → GenAI Engineer → Senior Developer (AI)",
       "company": "Reelwise Entertainment",
-      "description": "Led AI development for enterprise and media technology projects. Designed production-ready conversational AI, document intelligence, and predictive analytics solutions."
+      "description": "Joined as an AI Intern and progressed to Senior Developer over two years, building production conversational AI, document intelligence, and predictive analytics platforms for enterprise, healthcare, and media clients. Owned AI backend design — LLM pipelines, RAG, and multi-agent workflows — and cloud-native deployment on Azure and GCP."
     },
     {
       "id": 3,
-      "startDate": "Aug 2024",
-      "endDate": "Jun 2025",
-      "role": "GenAI Engineer",
-      "company": "Reelwise Entertainment",
-      "description": "Built scalable AI backends using Generative AI, LLMs, and RAG. Developed cloud-native systems for enterprise and healthcare domains."
-    },
-    {
-      "id": 4,
-      "startDate": "Feb 2024",
-      "endDate": "Jul 2024",
-      "role": "GenAI Engineer",
-      "company": "Reelwise Entertainment",
-      "description": "Implemented AI agent workflows, multi-step reasoning, and conversational AI platforms using LangChain, FastAPI, and Docker."
-    },
-    {
-      "id": 5,
-      "startDate": "Dec 2023",
+      "startDate": "Nov 2023",
       "endDate": "Feb 2024",
       "role": "Machine Learning Intern",
-      "company": "MegSoft",
-      "description": "Developed APIs using Flask and FastAPI. Worked with PyTorch and TensorFlow for ML model development."
-    },
-    {
-      "id": 6,
-      "startDate": "Nov 2023",
-      "endDate": "Dec 2023",
-      "role": "Machine Learning Intern",
-      "company": "CodeSpeedy Technology",
-      "description": "Data analysis and ML model implementation with a focus on NLP and Predictive Analytics for EdTech content."
+      "company": "MegSoft · CodeSpeedy Technology",
+      "description": "Early ML internships: built Flask and FastAPI services, worked with PyTorch and TensorFlow, and implemented NLP and predictive-analytics models."
     }
   ],
   "education": [

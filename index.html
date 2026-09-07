@@ -139,33 +139,31 @@
         </p>
         <div class="hero-ctas">
           <a href="#projects" class="btn btn-primary">View Projects</a>
+          <button type="button" class="btn btn-outline btn-resume" data-resume-trigger aria-haspopup="dialog" aria-controls="resume-modal">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+            </svg>
+            Résumé
+          </button>
           <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
       </div>
       <div class="hero-stats">
         <div class="stat-card">
           <div class="stat-num">2+</div>
-          <div class="stat-label">Years of GenAI Experience</div>
+          <div class="stat-label">Years building production GenAI</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">6</div>
-          <div class="stat-label">Enterprise AI Projects</div>
+          <div class="stat-label">Enterprise AI systems shipped</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">3</div>
-          <div class="stat-label">Countries Served</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">2</div>
-          <div class="stat-label">AI Platforms Built from Scratch</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">5+</div>
-          <div class="stat-label">AI Platforms Built</div>
+          <div class="stat-label">Countries served</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">4</div>
-          <div class="stat-label">Industries Served</div>
+          <div class="stat-label">Industries: healthcare, utilities, research, media</div>
         </div>
       </div>
     </div>
@@ -183,11 +181,6 @@
           <p>I'm Pranit, a Generative AI Engineer based in Mumbai, India. I design and build intelligent systems that solve real-world business problems — from multimodal hospital surveillance to enterprise document intelligence platforms.</p>
           <p>With a Master's in Data Science from VIT and a background in Mathematics, I bridge rigorous analytical thinking with practical AI engineering to deliver scalable, production-ready solutions.</p>
           <p>My work spans Agentic AI, Multi-Agent Orchestration, LLM pipelines, RAG architectures, and cloud-native deployments on Azure and GCP.</p>
-          <div class="awards-grid">
-            <div class="award-badge"><div class="award-icon">🏆</div><div><div class="award-name">Most Valuable Player</div><div class="award-year">Employee Award</div></div></div>
-            <div class="award-badge"><div class="award-icon">⭐</div><div><div class="award-name">Employee of the Year</div><div class="award-year">Annual Award</div></div></div>
-            <div class="award-badge"><div class="award-icon">🎓</div><div><div class="award-name">INSPIRE Scholarship</div><div class="award-year">2016</div></div></div>
-          </div>
         </div>
         <div>
           <div class="section-header">
@@ -195,13 +188,11 @@
             <h2>Continuous learning</h2>
           </div>
           <ul class="certifications-list">
-            <li>AI Agents with Model Context Protocol MCP and A2A – LinkedIn Learning</li>
-            <li>Build AI Agents and Chatbots with LangGraph – LinkedIn Learning</li>
-            <li>Prompt Engineering for Developers – DeepLearning.AI</li>
+            <li>AI Agents in LangGraph – DeepLearning.AI</li>
+            <li>Building AI Agents with MCP and Agent2Agent (A2A) – LinkedIn Learning</li>
             <li>GenAIOps Foundations – LinkedIn Learning</li>
-            <li>Mastering Responsible AI: From Concept to Auditing</li>
-            <li>Foundations of Responsible AI</li>
-            <li>Introduction to AI Governance</li>
+            <li>Introduction to AI Governance – LinkedIn Learning</li>
+            <li>Docker for Data Engineers – LinkedIn Learning</li>
           </ul>
         </div>
       </div>
@@ -276,9 +267,15 @@
             I'm always open to connecting with professionals working in Generative AI, Agentic AI, Enterprise AI,
             and AI Product Development. Whether you have a project, collaboration idea, or just want to talk AI — reach out.
           </p>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pranitsawant6998@gmail.com" target="_blank" rel="noreferrer" class="btn btn-primary">
-  Send an Email</a>
-          <!-- <a href="mailto:pranitsawant6998@gmail.com" class="btn btn-primary">Send an Email</a> -->
+          <div class="contact-ctas">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pranitsawant6998@gmail.com" target="_blank" rel="noreferrer" class="btn btn-primary">Send an Email</a>
+            <button type="button" class="btn btn-outline btn-resume" data-resume-trigger aria-haspopup="dialog" aria-controls="resume-modal">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+              </svg>
+              Résumé
+            </button>
+          </div>
         </div>
         <div class="contact-links">
           <a href="mailto:pranitsawant6998@gmail.com" class="contact-link">
@@ -333,6 +330,21 @@
         referrerpolicy="no-referrer-when-downgrade"
         title="Map showing Mumbai, India"
       ></iframe>
+    </div>
+  </div>
+
+  <div class="resume-modal" id="resume-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="resume-modal-panel">
+      <button class="resume-modal-close" type="button" aria-label="Close">×</button>
+      <div class="resume-modal-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+        </svg>
+      </div>
+      <h3 id="resume-modal-title">Résumé available on request</h3>
+      <p>Send me a quick email and I'll share my up-to-date résumé with you directly.</p>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pranitsawant6998@gmail.com&su=Resume%20request" target="_blank" rel="noreferrer" class="btn btn-primary">Email me for my résumé</a>
+      <p class="resume-modal-hint">pranitsawant6998@gmail.com</p>
     </div>
   </div>
 
